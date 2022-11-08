@@ -24,7 +24,9 @@ class PlantAppBody extends StatelessWidget {
     description:
         'Eldest brother to Julian, Grade A student with a bright furture. Quite but confident.',
     plantID: 1,
-    firstWater: DateTime.now(),
+    water: Watering(next: DateTime.now()),
+    feed: Feeding(next: DateTime.now()),
+    repotting: Repotting(next: DateTime.now()),
   );
 
   static final plantTwo = Plant(
@@ -33,7 +35,9 @@ class PlantAppBody extends StatelessWidget {
     description:
         'Brother to Juan, definatley the sporty one. But doesn\'t shine so bright when it comes to inteligence.',
     plantID: 2,
-    firstWater: DateTime.now(),
+    water: Watering(next: DateTime.now()),
+    feed: Feeding(next: DateTime.now()),
+    repotting: Repotting(next: DateTime.now()),
   );
 
   static final plantThree = Plant(
@@ -42,7 +46,9 @@ class PlantAppBody extends StatelessWidget {
     description:
         'A precious lady, expensive tastes and a little spoilt. She\'s lovely once you get to know her though.',
     plantID: 3,
-    firstWater: DateTime.now(),
+    water: Watering(next: DateTime.now()),
+    feed: Feeding(next: DateTime.now()),
+    repotting: Repotting(next: DateTime.now()),
   );
 
   static final plantFour = Plant(
@@ -51,7 +57,9 @@ class PlantAppBody extends StatelessWidget {
     description:
         'An old girl, with hidden knowledge and old wives tales about health. A good friend to have.',
     plantID: 4,
-    firstWater: DateTime.now(),
+    water: Watering(next: DateTime.now()),
+    feed: Feeding(next: DateTime.now()),
+    repotting: Repotting(next: DateTime.now()),
   );
 
   static final plantFive = Plant(
@@ -60,7 +68,9 @@ class PlantAppBody extends StatelessWidget {
     description:
         'A hippy girl, very in touch with nature and super trendy. Also super needy.',
     plantID: 5,
-    firstWater: DateTime.now(),
+    water: Watering(next: DateTime.now()),
+    feed: Feeding(next: DateTime.now()),
+    repotting: Repotting(next: DateTime.now()),
   );
 
   static final plantSix = Plant(
@@ -69,7 +79,9 @@ class PlantAppBody extends StatelessWidget {
     description:
         'A small chilled out guy. Will get on with anyone and likes it anywhere. Easy going.',
     plantID: 6,
-    firstWater: DateTime.now(),
+    water: Watering(next: DateTime.now()),
+    feed: Feeding(next: DateTime.now()),
+    repotting: Repotting(next: DateTime.now()),
   );
 
   final List<Plant> _plantList = [
@@ -88,56 +100,62 @@ class PlantAppBody extends StatelessWidget {
         children: [
           /* TO DO BOX */
           Flexible(
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => TodaysTasks(_plantList),
-                  ),
-                );
-              },
-              child: Container(
-                width: double.infinity,
-                //height: 100,
-                color: Colors.green[400],
-                child: const Center(
-                  child: Text(
-                    'to-do',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
+            child: Row(
+              children: [
+                Flexible(
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TodaysTasks(_plantList),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      //height: 100,
+                      color: Colors.green[400],
+                      child: const Center(
+                        child: Text(
+                          'to-do',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ),
-          ),
-          /* MY PLANTS BOX */
-          Flexible(
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => PlantList(_plantList),
-                  ),
-                );
-              },
-              child: Container(
-                width: double.infinity,
-                //height: 150,
-                color: Colors.teal[400],
-                child: const Center(
-                  child: Text(
-                    'My Plants',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
+                /* MY PLANTS BOX */
+                Flexible(
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PlantList(_plantList),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      //height: 150,
+                      color: Colors.teal[400],
+                      child: const Center(
+                        child: Text(
+                          'My Plants',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
+              ],
             ),
           ),
           /*MY ROOMS BOX*/

@@ -94,7 +94,7 @@ class PlantPage extends StatelessWidget {
               ),
               Center(
                 child: Text(
-                  DateFormat.MMMMd().format(plant.firstWater).toString(),
+                  DateFormat.MMMMd().format(plant.water.next).toString(),
                   style: TextStyle(
                     fontSize: 15,
                     color: Colors.grey[600],

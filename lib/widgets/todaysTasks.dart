@@ -12,40 +12,46 @@ class TodaysTasks extends StatefulWidget {
 }
 
 class _TodaysTasksState extends State<TodaysTasks> {
-  bool _index = true;
-  AppBar appbar = AppBar(
-    title: const Text("Todays Tasks"),
+  final _controller = PageController(
+    initialPage: 0,
   );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appbar,
-      body: GestureDetector(
-        onPanUpdate: (details) {
-          // Swiping in right direction.
-          if (details.delta.dx > 0) {
-            setState(() {
-              _index = true;
-            });
-          }
-
-          // Swiping in left direction.
-          if (details.delta.dx < 0) {
-            setState(() {
-              _index = false;
-            });
-          }
-        },
-        child: SwipeTasks(_index, widget._plantList, appbar),
+      body: Column(
+        children: [
+          SizedBox(
+            height: (MediaQuery.of(context).size.height) * 0.1,
+            child: Row(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(
+                    Icons.arrow_back,
+                    color: Colors.red,
+                  ),
+                ),
+                const Center(child: Text("Todays Tasks")),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: (MediaQuery.of(context).size.height) * 0.9,
+            child: PageView(
+              controller: _controller,
+              children: [
+                WateringTask(widget._plantList),
+                FeedingTask(widget._plantList),
+                RepottingTask(widget._plantList),
+              ],
+            ),
+          ),
+        ],
       ),
       /*ADD FUNCTION TO DELETE TASKS WHEN THIS IS PRESSED*/
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: _index
-            ? const FittedBox(child: Text("watering"))
-            : const FittedBox(child: Text("Other Tasks")),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
