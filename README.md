@@ -12,6 +12,8 @@ Sort dates out so it doesn't always just take todays at start up
 
 Add a rooms page   
 
+Add theme options for text fonts 
+
 
 Tonight: 
 decide on app bar or no app bar 
