@@ -19,6 +19,7 @@ class _PlantListState extends State<PlantList> {
       appBar: AppBar(
         title: const Text("My Plants"),
       ),
+      backgroundColor: Colors.grey[400],
       body: Container(
         margin: const EdgeInsets.fromLTRB(5, 0, 5, 0),
         padding: const EdgeInsets.all(10),

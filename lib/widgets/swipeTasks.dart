@@ -28,6 +28,7 @@ class _WateringTaskState extends State<WateringTask> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[400],
       body: Column(
         children: [
           Container(
@@ -38,7 +39,7 @@ class _WateringTaskState extends State<WateringTask> {
             margin: const EdgeInsets.fromLTRB(10, 5, 10, 0),
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(20)),
-              color: Color.fromARGB(96, 80, 78, 78),
+              //color: Colors.green,
             ),
 
             height: (MediaQuery.of(context).size.height) * 0.7,
@@ -133,6 +134,7 @@ class _FeedingTaskState extends State<FeedingTask> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[400],
       body: Column(
         children: [
           Container(
@@ -143,7 +145,7 @@ class _FeedingTaskState extends State<FeedingTask> {
             margin: const EdgeInsets.fromLTRB(10, 5, 10, 0),
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(20)),
-              color: Color.fromARGB(96, 80, 78, 78),
+              //color: Colors.green,
             ),
 
             height: (MediaQuery.of(context).size.height) * 0.7,
@@ -239,6 +241,7 @@ class _RepottingTaskState extends State<RepottingTask> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[400],
       body: Column(
         children: [
           Container(
@@ -249,7 +252,7 @@ class _RepottingTaskState extends State<RepottingTask> {
             margin: const EdgeInsets.fromLTRB(10, 5, 10, 0),
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(20)),
-              color: Color.fromARGB(96, 80, 78, 78),
+              //color: Colors.green,
             ),
 
             height: (MediaQuery.of(context).size.height) * 0.7,

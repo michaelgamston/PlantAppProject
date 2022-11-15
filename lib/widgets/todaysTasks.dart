@@ -19,10 +19,14 @@ class _TodaysTasksState extends State<TodaysTasks> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[400],
       body: Column(
         children: [
           SizedBox(
-            height: (MediaQuery.of(context).size.height) * 0.1,
+            height: (MediaQuery.of(context).size.height) * 0.035,
+          ),
+          SizedBox(
+            height: (MediaQuery.of(context).size.height) * 0.075,
             child: Row(
               children: [
                 IconButton(
@@ -31,15 +35,34 @@ class _TodaysTasksState extends State<TodaysTasks> {
                   },
                   icon: const Icon(
                     Icons.arrow_back,
-                    color: Colors.red,
+                    color: Colors.green,
                   ),
                 ),
-                const Center(child: Text("Todays Tasks")),
+                SizedBox(
+                  //get the title roughly in the middle
+                  width: MediaQuery.of(context).size.width * 0.175,
+                ),
+                Center(
+                  child: Container(
+                    padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                      color: Colors.green,
+                    ),
+                    child: const Text(
+                      "Todays Tasks",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
           SizedBox(
-            height: (MediaQuery.of(context).size.height) * 0.9,
+            height: (MediaQuery.of(context).size.height) * 0.85,
             child: PageView(
               controller: _controller,
               children: [
