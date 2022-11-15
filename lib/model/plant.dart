@@ -16,7 +16,7 @@ class Feeding {
   final DateTime next;
   bool completeTask = false;
   bool checkBox = false;
-  static String avatar = "assets/images/repot.jpg";
+  static String avatar = "assets/images/feed.jpg";
 
   Feeding({required this.next});
 }
@@ -25,7 +25,7 @@ class Repotting {
   final DateTime next;
   bool completeTask = false;
   bool checkBox = false;
-  static String avatar = "assets/images/feed.jpg";
+  static String avatar = "assets/images/repot.jpg";
 
   Repotting({required this.next});
 }

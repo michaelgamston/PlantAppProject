@@ -28,7 +28,7 @@ class _WateringTaskState extends State<WateringTask> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[400],
+      //backgroundColor: Colors.grey[400],
       body: Column(
         children: [
           Container(
@@ -40,6 +40,14 @@ class _WateringTaskState extends State<WateringTask> {
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(20)),
               //color: Colors.green,
+              gradient: LinearGradient(
+                colors: [
+                  Color.fromARGB(255, 89, 218, 93),
+                  Color.fromARGB(255, 50, 112, 58),
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
             ),
 
             height: (MediaQuery.of(context).size.height) * 0.7,
@@ -94,6 +102,8 @@ class _WateringTaskState extends State<WateringTask> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color.fromARGB(255, 50, 112, 58),
+        splashColor: const Color.fromARGB(255, 89, 218, 93),
         onPressed: () {
           for (int i = 0; i < _taskList.length; i++) {
             if (_taskList[i].water.checkBox) {
@@ -134,7 +144,7 @@ class _FeedingTaskState extends State<FeedingTask> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[400],
+      //backgroundColor: Colors.grey[400],
       body: Column(
         children: [
           Container(
@@ -146,6 +156,14 @@ class _FeedingTaskState extends State<FeedingTask> {
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(20)),
               //color: Colors.green,
+              gradient: LinearGradient(
+                colors: [
+                  Color.fromARGB(255, 89, 218, 93),
+                  Color.fromARGB(255, 50, 112, 58),
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
             ),
 
             height: (MediaQuery.of(context).size.height) * 0.7,
@@ -200,6 +218,8 @@ class _FeedingTaskState extends State<FeedingTask> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color.fromARGB(255, 50, 112, 58),
+        splashColor: const Color.fromARGB(255, 89, 218, 93),
         onPressed: () {
           for (int i = 0; i < _taskList.length; i++) {
             if (_taskList[i].feed.checkBox) {
@@ -241,7 +261,7 @@ class _RepottingTaskState extends State<RepottingTask> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[400],
+      //backgroundColor: Colors.grey[400],
       body: Column(
         children: [
           Container(
@@ -253,6 +273,14 @@ class _RepottingTaskState extends State<RepottingTask> {
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(20)),
               //color: Colors.green,
+              gradient: LinearGradient(
+                colors: [
+                  Color.fromARGB(255, 89, 218, 93),
+                  Color.fromARGB(255, 50, 112, 58),
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
             ),
 
             height: (MediaQuery.of(context).size.height) * 0.7,
@@ -307,6 +335,8 @@ class _RepottingTaskState extends State<RepottingTask> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color.fromARGB(255, 50, 112, 58),
+        splashColor: const Color.fromARGB(255, 89, 218, 93),
         onPressed: () {
           for (int i = 0; i < _taskList.length; i++) {
             if (_taskList[i].repotting.checkBox) {
